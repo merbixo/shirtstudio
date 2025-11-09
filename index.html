@@ -51,11 +51,11 @@
     <h1 class="text-6xl md:text-7xl font-black anime-text leading-tight">MERBI'S
       <span class="block text-3xl md:text-4xl japanese-text text-purple-200 mt-2">アニメコレクション</span>
     </h1>
-    <p class="mt-6 text-lg text-gray-200 max-w-2xl mx-auto">Premium anime-inspired tees — print-on-demand via Printify. Worldwide payouts with Wise.</p>
+    <p class="mt-6 text-lg text-gray-200 max-w-2xl mx-auto">Premium anime-inspired tees — Pay securely via HitPay.</p>
 
     <div class="mt-8 flex justify-center gap-4">
       <button onclick="scrollToSection('collections')" class="bg-white text-gray-900 px-6 py-3 rounded-full font-bold hover:scale-105 transition-transform">Explore Collections</button>
-      <button onclick="openPrintify()" class="border border-white px-6 py-3 rounded-full font-bold hover:bg-white/10 transition-colors">Buy on Printify</button>
+      <button onclick="openHitPay()" class="border border-white px-6 py-3 rounded-full font-bold hover:bg-white/10 transition-colors">Buy with HitPay</button>
     </div>
 
     <!-- Animated Spy preview -->
@@ -113,8 +113,7 @@
         <img src="images/spy-family-design1.svg" alt="Spy x Family Tee" class="rounded-lg mb-3 w-full h-48 object-cover"/>
         <p class="text-gray-300">Spy x Family Tee — Available Now</p>
         <div class="mt-4 flex gap-3">
-          <button onclick="openPrintify('spy-family')" class="flex-1 bg-purple-600 hover:bg-purple-700 py-3 rounded-lg font-semibold">Buy on Printify</button>
-          <button onclick="openCheckoutInfo()" class="px-4 py-3 border border-gray-700 rounded-lg">Pay info</button>
+          <button onclick="openHitPay('spy-family')" class="flex-1 bg-purple-600 hover:bg-purple-700 py-3 rounded-lg font-semibold">Buy with HitPay</button>
         </div>
       </div>
     </div>
@@ -166,10 +165,9 @@
 <section class="py-12 anime-gradient">
   <div class="max-w-4xl mx-auto text-center px-4">
     <h2 class="text-3xl font-bold anime-text">Ready to level up your style?</h2>
-    <p class="text-gray-200 mt-2">Print-on-demand via Printify. Payouts with Wise to your bank.</p>
+    <p class="text-gray-200 mt-2">Secure checkout with HitPay & production via Gelato.</p>
     <div class="mt-6 flex justify-center gap-4">
-      <button onclick="openPrintify()" class="bg-white text-gray-900 px-6 py-3 rounded-full font-bold">Visit Printify Store</button>
-      <button onclick="openCheckoutInfo()" class="border border-white px-6 py-3 rounded-full">Checkout & Wise</button>
+      <button onclick="openHitPay()" class="bg-white text-gray-900 px-6 py-3 rounded-full font-bold">Buy with HitPay</button>
     </div>
   </div>
 </section>
@@ -213,25 +211,6 @@
     &copy; 2025 Merbi's Anime Collection — Built for GitHub Pages.
   </div>
 </footer>
-
-<!-- Modal / Info -->
-<div id="checkoutInfo" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 p-4">
-  <div class="bg-gray-900 rounded-lg max-w-xl w-full p-6">
-    <div class="flex justify-between items-center mb-4">
-      <h3 class="text-xl font-bold">Checkout & Wise</h3>
-      <button onclick="closeCheckoutInfo()" class="text-gray-400">&times;</button>
-    </div>
-    <div class="text-gray-300 space-y-3">
-      <p>We use Printify for product printing and fulfillment. For payouts and receiving store income you can connect Wise (formerly TransferWise) to your account for low-fee transfers.</p>
-      <ol class="list-decimal ml-5 text-sm text-gray-400">
-        <li>Create a Printify account and connect a store (Shopify, Etsy, WooCommerce, or use Printify's mock storefront link).</li>
-        <li>In Printify, set your payout method to Wise (if supported) or withdraw to your local bank via Wise details.</li>
-        <li>On this static demo site, "Buy" buttons link to the Printify/merchant product page — actual checkout will happen on the Printify/store platform.</li>
-      </ol>
-      <p class="text-sm text-yellow-300">Note: Wise is used for payouts; to accept Wise payments directly you'd need a backend (not included in this static GitHub Pages demo).</p>
-    </div>
-  </div>
-</div>
 
 <script src="assets/script.js"></script>
 </body>
