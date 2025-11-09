@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+:root{
+  --glass: rgba(255,255,255,0.04);
+}
+
+body{font-family: 'Noto Sans JP', sans-serif;}
+
+.anime-gradient{
+  background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+}
+.anime-text{font-family:'Orbitron',monospace;}
+.japanese-text{font-family:'Noto Sans JP',sans-serif;}
+.neon-glow{box-shadow:0 0 18px rgba(102,126,234,0.45);}
+.hover-lift{transition:transform .28s ease,box-shadow .28s ease;}
+.hover-lift:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,0,0,0.45);}
+.floating-animation{animation:float 6s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+
+/* cards */
+.collection-card{background:linear-gradient(145deg,#0b1020 0%, #121427 60%);border:1px solid rgba(124,58,237,0.08);}
+
+/* coming soon animation */
+.coming-soon{position:relative;overflow:hidden;}
+.coming-soon::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);
+  transform:translateX(-120%);
+  animation: shimmer 2.5s linear infinite;
+}
+@keyframes shimmer{0%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+
+/* small helpers */
+.floating-card{transform-origin:center; animation: float 5s ease-in-out infinite;}

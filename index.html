@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Merbi's Anime Collection — V2</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="bg-gray-900 text-white antialiased">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-sm border-b border-purple-600/25">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 anime-gradient rounded-lg flex items-center justify-center neon-glow">
+          <span class="text-white font-bold anime-text">M</span>
+        </div>
+        <div>
+          <div class="text-xl font-bold anime-text">Merbi's</div>
+          <div class="text-xs japanese-text text-purple-300">アニメ</div>
+        </div>
+      </div>
+      <div class="hidden md:flex gap-8 items-center">
+        <a href="#collections" class="hover:text-purple-300">Collections</a>
+        <a href="#featured" class="hover:text-purple-300">Featured</a>
+        <a href="#about" class="hover:text-purple-300">About</a>
+        <a href="#contact" class="hover:text-purple-300">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="scrollToSection('collections')" class="hidden md:inline-block bg-purple-600 hover:bg-purple-700 px-5 py-2 rounded-full font-semibold">Shop</button>
+        <button id="mobileMenuBtn" class="md:hidden px-3 py-2 rounded bg-white/10">Menu</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex items-center justify-center anime-gradient overflow-hidden pt-16">
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <!-- floating shapes -->
+  <div class="absolute left-10 top-24 floating-animation opacity-60">
+    <div class="w-28 h-28 rounded-full blur-2xl bg-pink-500/30"></div>
+  </div>
+  <div class="absolute right-10 bottom-28 floating-animation opacity-60" style="animation-delay:-2s">
+    <div class="w-36 h-36 rounded-full blur-2xl bg-blue-500/30"></div>
+  </div>
+
+  <div class="relative z-10 max-w-5xl text-center px-4">
+    <h1 class="text-6xl md:text-7xl font-black anime-text leading-tight">MERBI'S
+      <span class="block text-3xl md:text-4xl japanese-text text-purple-200 mt-2">アニメコレクション</span>
+    </h1>
+    <p class="mt-6 text-lg text-gray-200 max-w-2xl mx-auto">Premium anime-inspired tees — print-on-demand via Printify. Worldwide payouts with Wise.</p>
+
+    <div class="mt-8 flex justify-center gap-4">
+      <button onclick="scrollToSection('collections')" class="bg-white text-gray-900 px-6 py-3 rounded-full font-bold hover:scale-105 transition-transform">Explore Collections</button>
+      <button onclick="openPrintify()" class="border border-white px-6 py-3 rounded-full font-bold hover:bg-white/10 transition-colors">Buy on Printify</button>
+    </div>
+
+    <!-- Animated Spy preview -->
+    <div class="mt-12 flex justify-center">
+      <div class="w-64 h-64 rounded-xl bg-gradient-to-br from-purple-800/60 to-indigo-700/60 p-4 drop-shadow-lg floating-card">
+        <img src="images/spy-family-design1.svg" alt="Spy x Family preview" class="w-full h-full object-cover rounded-md"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Collections -->
+<section id="collections" class="py-20 bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold anime-text">Collections</h2>
+      <p class="text-gray-400 mt-2">Curated series — new drops & exclusive prints.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Coming Soon animated cards -->
+      <div class="collection-card coming-soon p-8 rounded-2xl">
+        <h3 class="text-xl font-semibold mb-2">Shonen Legends</h3>
+        <p class="text-sm text-gray-300 mb-4">Coming Soon</p>
+        <div class="h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded"></div>
+      </div>
+
+      <div class="collection-card coming-soon p-8 rounded-2xl">
+        <h3 class="text-xl font-semibold mb-2">Otaku Essentials</h3>
+        <p class="text-sm text-gray-300 mb-4">Coming Soon</p>
+        <div class="h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded"></div>
+      </div>
+
+      <div class="collection-card coming-soon p-8 rounded-2xl">
+        <h3 class="text-xl font-semibold mb-2">2D Waifu & Husbando Club</h3>
+        <p class="text-sm text-gray-300 mb-4">Coming Soon</p>
+        <div class="h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded"></div>
+      </div>
+
+      <div class="collection-card coming-soon p-8 rounded-2xl">
+        <h3 class="text-xl font-semibold mb-2">Anime Streetwear Vibes</h3>
+        <p class="text-sm text-gray-300 mb-4">Coming Soon</p>
+        <div class="h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded"></div>
+      </div>
+
+      <div class="collection-card coming-soon p-8 rounded-2xl">
+        <h3 class="text-xl font-semibold mb-2">Retro Anime Throwback</h3>
+        <p class="text-sm text-gray-300 mb-4">Coming Soon</p>
+        <div class="h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded"></div>
+      </div>
+
+      <!-- Spy x Family live product -->
+      <div class="collection-card p-6 rounded-2xl bg-gradient-to-br from-gray-800/70 to-gray-900/70">
+        <h3 class="text-2xl font-bold anime-text mb-3">Spy x Family</h3>
+        <img src="images/spy-family-design1.svg" alt="Spy x Family Tee" class="rounded-lg mb-3 w-full h-48 object-cover"/>
+        <p class="text-gray-300">Spy x Family Tee — Available Now</p>
+        <div class="mt-4 flex gap-3">
+          <button onclick="openPrintify('spy-family')" class="flex-1 bg-purple-600 hover:bg-purple-700 py-3 rounded-lg font-semibold">Buy on Printify</button>
+          <button onclick="openCheckoutInfo()" class="px-4 py-3 border border-gray-700 rounded-lg">Pay info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured -->
+<section id="featured" class="py-16 bg-gray-800">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold anime-text">Featured</h2>
+      <p class="text-gray-400">Popular designs & staff picks</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Example product cards -->
+      <div class="bg-gray-900 rounded-xl overflow-hidden p-4 hover-lift">
+        <div class="h-40 bg-gradient-to-br from-orange-500 to-red-500 rounded-md flex items-center justify-center text-4xl">🍥</div>
+        <div class="mt-3">
+          <div class="font-semibold">Hokage Legacy</div>
+          <div class="text-sm text-gray-400">$29.99</div>
+        </div>
+      </div>
+      <div class="bg-gray-900 rounded-xl overflow-hidden p-4 hover-lift">
+        <div class="h-40 bg-gradient-to-br from-red-500 to-gray-700 rounded-md flex items-center justify-center text-4xl">⚔️</div>
+        <div class="mt-3">
+          <div class="font-semibold">Survey Corps Elite</div>
+          <div class="text-sm text-gray-400">$32.99</div>
+        </div>
+      </div>
+      <div class="bg-gray-900 rounded-xl overflow-hidden p-4 hover-lift">
+        <div class="h-40 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-md flex items-center justify-center text-4xl">🐉</div>
+        <div class="mt-3">
+          <div class="font-semibold">Super Saiyan Power</div>
+          <div class="text-sm text-gray-400">$31.99</div>
+        </div>
+      </div>
+      <div class="bg-gray-900 rounded-xl overflow-hidden p-4 hover-lift">
+        <div class="h-40 bg-gradient-to-br from-blue-500 to-teal-500 rounded-md flex items-center justify-center text-4xl">🏴‍☠️</div>
+        <div class="mt-3">
+          <div class="font-semibold">Pirate King Dreams</div>
+          <div class="text-sm text-gray-400">$30.99</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-12 anime-gradient">
+  <div class="max-w-4xl mx-auto text-center px-4">
+    <h2 class="text-3xl font-bold anime-text">Ready to level up your style?</h2>
+    <p class="text-gray-200 mt-2">Print-on-demand via Printify. Payouts with Wise to your bank.</p>
+    <div class="mt-6 flex justify-center gap-4">
+      <button onclick="openPrintify()" class="bg-white text-gray-900 px-6 py-3 rounded-full font-bold">Visit Printify Store</button>
+      <button onclick="openCheckoutInfo()" class="border border-white px-6 py-3 rounded-full">Checkout & Wise</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="bg-gray-900 py-12 border-t border-gray-800">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 anime-gradient rounded-lg flex items-center justify-center neon-glow">
+          <span class="text-white font-bold anime-text">M</span>
+        </div>
+        <div>
+          <div class="font-bold anime-text">Merbi's</div>
+          <div class="text-sm text-gray-400">アニメ愛好家のために作られました</div>
+        </div>
+      </div>
+      <p class="text-gray-400">Premium anime t-shirts for true otaku culture enthusiasts.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold mb-3">Collections</h4>
+      <ul class="text-gray-400 space-y-2">
+        <li>Shonen Legends</li>
+        <li>Otaku Essentials</li>
+        <li>Spy x Family</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-semibold mb-3">Support</h4>
+      <ul class="text-gray-400 space-y-2">
+        <li>Size Guide</li>
+        <li>Shipping Info</li>
+        <li>Returns</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="text-center text-gray-500 mt-8">
+    &copy; 2025 Merbi's Anime Collection — Built for GitHub Pages.
+  </div>
+</footer>
+
+<!-- Modal / Info -->
+<div id="checkoutInfo" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 p-4">
+  <div class="bg-gray-900 rounded-lg max-w-xl w-full p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold">Checkout & Wise</h3>
+      <button onclick="closeCheckoutInfo()" class="text-gray-400">&times;</button>
+    </div>
+    <div class="text-gray-300 space-y-3">
+      <p>We use Printify for product printing and fulfillment. For payouts and receiving store income you can connect Wise (formerly TransferWise) to your account for low-fee transfers.</p>
+      <ol class="list-decimal ml-5 text-sm text-gray-400">
+        <li>Create a Printify account and connect a store (Shopify, Etsy, WooCommerce, or use Printify's mock storefront link).</li>
+        <li>In Printify, set your payout method to Wise (if supported) or withdraw to your local bank via Wise details.</li>
+        <li>On this static demo site, "Buy" buttons link to the Printify/merchant product page — actual checkout will happen on the Printify/store platform.</li>
+      </ol>
+      <p class="text-sm text-yellow-300">Note: Wise is used for payouts; to accept Wise payments directly you'd need a backend (not included in this static GitHub Pages demo).</p>
+    </div>
+  </div>
+</div>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

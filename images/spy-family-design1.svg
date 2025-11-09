@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7c3aed" />
+      <stop offset="1" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" rx="40" fill="url(#g)"/>
+  <g transform="translate(140,140)" fill="#fff" opacity="0.95">
+    <rect x="0" y="0" width="920" height="920" rx="24" fill="rgba(0,0,0,0.12)"/>
+    <text x="460" y="420" font-family="Orbitron, sans-serif" font-size="72" text-anchor="middle">Spy x Family</text>
+    <text x="460" y="520" font-family="Noto Sans JP, sans-serif" font-size="28" text-anchor="middle">Preview Tee</text>
+    <!-- simple silhouette shapes -->
+    <circle cx="320" cy="320" r="120" fill="rgba(255,255,255,0.12)"/>
+    <rect x="420" y="260" width="200" height="240" rx="60" fill="rgba(255,255,255,0.08)"/>
+    <circle cx="600" cy="320" r="90" fill="rgba(255,255,255,0.12)"/>
+  </g>
+</svg>
