@@ -1,27 +1,25 @@
+async function openIntaSend(productId = "spy-family") {
+  try {
+    const customerEmail = prompt("Enter your email:");
+    const customerName = prompt("Enter your name:");
 
-function scrollToSection(id){
-  const el = document.getElementById(id);
-  if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+    const resp = await fetch('https://your-backend-url.com/create-intasend-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        productId,
+        customerEmail,
+        customerName,
+        quantity: 1,
+        variant: "M"
+      })
+    });
+
+    const data = await resp.json();
+    if (data.checkoutUrl) window.location.href = data.checkoutUrl;
+    else alert("Failed to initiate payment");
+  } catch (err) {
+    console.error(err);
+    alert("Error initiating payment.");
+  }
 }
-
-function openPrintify(collection){
-  // placeholder Printify link — replace with your store product/collection link
-  let base = 'https://printify.com/merbixo-anime-shop';
-  if(collection) base += '/'+collection;
-  window.open(base, '_blank');
-}
-
-function openCheckoutInfo(){
-  document.getElementById('checkoutInfo').classList.remove('hidden');
-  document.getElementById('checkoutInfo').classList.add('flex');
-}
-
-function closeCheckoutInfo(){
-  document.getElementById('checkoutInfo').classList.add('hidden');
-  document.getElementById('checkoutInfo').classList.remove('flex');
-}
-
-/* simple mobile menu (demo) */
-document.getElementById('mobileMenuBtn')?.addEventListener('click', function(){
-  alert('This is a demo static site for GitHub Pages. Use the nav links on desktop or edit the file to add a mobile menu.');
-});
